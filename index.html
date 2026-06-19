@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIK CO HOLDINGS</title>
+<meta name="description" content="A house of God-led, women-empowerment brands — digital products, music, and creative services under one vision.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211C20;
+    --pearl:#FCF9F6;
+    --rose:#B5677A;
+    --rose-deep:#8F4A5E;
+    --blush:#F4E7E7;
+    --gold:#BE9A57;
+    --plum:#34202C;
+    --mute:#8A7E84;
+    --line:rgba(33,28,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;color:var(--ink);background:var(--pearl);
+    line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px}
+  .serif{font-family:'Cormorant Garamond',serif}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08;letter-spacing:.01em}
+  .kicker{
+    font-family:'Jost',sans-serif;text-transform:uppercase;
+    letter-spacing:.42em;font-size:.68rem;font-weight:500;color:var(--rose);
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(252,249,246,.88);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .mono{
+    font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;
+    letter-spacing:.34em;color:var(--ink);text-decoration:none;
+  }
+  .navlinks{display:flex;gap:34px}
+  .navlinks a{
+    font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;color:var(--ink);
+    text-decoration:none;font-weight:400;transition:color .2s;
+  }
+  .navlinks a:hover{color:var(--rose)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:96px 0 70px}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:radial-gradient(80% 120% at 88% -10%, var(--blush) 0%, rgba(244,231,231,0) 55%);
+  }
+  .hero-inner{position:relative;z-index:1;max-width:880px}
+  .hero .kicker{display:block;margin-bottom:30px}
+  .hero h1{
+    font-size:clamp(3rem,9vw,6.4rem);color:var(--ink);
+    letter-spacing:.015em;margin-bottom:6px;
+  }
+  .hero h1 .amp{font-style:italic;color:var(--rose)}
+  .hero .lede{
+    font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;
+    font-size:clamp(1.3rem,2.8vw,1.85rem);color:var(--mute);
+    max-width:620px;margin:26px 0 40px;line-height:1.4;
+  }
+  .hero-meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);
+    border-radius:40px;padding:9px 22px;font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink);
+  }
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--rose)}
+  .arrowlink{
+    font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);
+    text-decoration:none;border-bottom:1px solid var(--rose);padding-bottom:4px;transition:opacity .2s;
+  }
+  .arrowlink:hover{opacity:.6}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow:hidden;background:var(--pearl);padding:20px 0;
+  }
+  .track{display:flex;gap:0;white-space:nowrap;animation:scroll 26s linear infinite;will-change:transform}
+  .track span{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.6rem;
+    color:var(--ink);padding:0 26px;display:inline-flex;align-items:center;
+  }
+  .track span::after{content:"·";color:var(--rose);margin-left:52px;font-style:normal}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- SERVICES ---------- */
+  .services{padding:104px 0 90px}
+  .sec-head{max-width:640px;margin-bottom:56px}
+  .sec-head .kicker{display:block;margin-bottom:18px}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--ink)}
+  .sec-head .intro{color:var(--mute);font-size:1.08rem;margin-top:20px;max-width:560px}
+  .svc{
+    display:grid;grid-template-columns:90px 1fr 1.1fr;gap:30px;align-items:start;
+    padding:42px 0;border-top:1px solid var(--line);
+  }
+  .svc:last-child{border-bottom:1px solid var(--line)}
+  .svc .num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-style:italic}
+  .svc h3{font-size:2rem;color:var(--ink);margin-bottom:8px}
+  .svc .label{
+    font-size:.7rem;text-transform:uppercase;letter-spacing:.22em;color:var(--rose);font-weight:500;
+  }
+  .svc p{color:var(--mute);font-size:1.02rem;max-width:430px}
+
+  /* ---------- MANIFESTO ---------- */
+  .manifesto{
+    background:var(--plum);color:var(--pearl);text-align:center;padding:120px 0;
+    position:relative;overflow:hidden;
+  }
+  .manifesto::after{
+    content:"";position:absolute;left:50%;top:50%;width:1px;height:54px;
+    background:var(--gold);transform:translate(-50%,-128px);
+  }
+  .manifesto .kicker{color:var(--gold);display:block;margin-bottom:26px}
+  .manifesto p{
+    font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.9rem);
+    line-height:1.32;max-width:820px;margin:0 auto;font-weight:400;
+  }
+  .manifesto p em{font-style:italic;color:var(--rose)}
+  .manifesto .support{
+    font-family:'Jost',sans-serif;font-weight:300;font-size:1.06rem;line-height:1.8;
+    color:rgba(252,249,246,.72);max-width:600px;margin:34px auto 0;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:108px 0;text-align:center}
+  .contact .kicker{display:block;margin-bottom:18px}
+  .contact h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--ink);margin-bottom:18px}
+  .contact p{color:var(--mute);max-width:460px;margin:0 auto 38px;font-size:1.05rem}
+  .btn{
+    display:inline-block;background:var(--ink);color:var(--pearl);text-decoration:none;
+    font-size:.76rem;text-transform:uppercase;letter-spacing:.22em;font-weight:400;
+    padding:18px 46px;border-radius:40px;transition:background .25s,transform .2s;
+  }
+  .btn:hover{background:var(--rose-deep);transform:translateY(-2px)}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
+  footer .mono{display:inline-block;margin-bottom:12px}
+  footer .fmute{color:var(--mute);font-size:.78rem;letter-spacing:.12em}
+  footer .fmute + .fmute{margin-top:6px}
+
+  /* ---------- MOTION / RESPONSIVE ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:6px}
+  @media (max-width:780px){
+    .navlinks{display:none}
+    .svc{grid-template-columns:54px 1fr;gap:14px 18px}
+    .svc .body{grid-column:1 / -1}
+    .hero{padding:70px 0 54px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="#" class="mono">N&nbsp;C&nbsp;H</a>
+      <div class="navlinks">
+        <a href="#contact">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <span class="kicker">A House of Brands</span>
+      <h1>Nik&nbsp;Co<br><span class="amp">Holdings</span></h1>
+      <p class="lede">The company behind a collection of God-led, women-empowerment brands — where digital products, music, and creative services rise under one vision.</p>
+      <div class="hero-meta">
+        <span class="pill"><span class="dot"></span> Founder-led · Faith-led</span>
+        <a href="#services" class="arrowlink">Explore the work ↘</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Growth</span><span>Purpose</span><span>Elevation</span><span>Faith</span><span>Legacy</span>
+      <span>Growth</span><span>Purpose</span><span>Elevation</span><span>Faith</span><span>Legacy</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">What We Do</span>
+        <h2>Three ways the house creates.</h2>
+        <p class="intro">Every brand under Nik Co Holdings is built to do one thing — pour into the woman on the other side of the screen. That work shows up in three forms: what she can learn, what she can listen to, and what we can create just for her.</p>
+      </div>
+
+      <div class="svc reveal">
+        <div class="num">I</div>
+        <div>
+          <h3>Digital Products</h3>
+          <span class="label">Courses &amp; Downloads</span>
+        </div>
+        <div class="body"><p>Self-paced courses, guided workbooks, and downloadable tools made to meet a woman exactly where she is. Each one is built to be kept and returned to — practical resources for healing, rebuilding self-worth, and the kind of growth that actually lasts. Buy it once, and it’s hers for good.</p></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="num">II</div>
+        <div>
+          <h3>Digital Music</h3>
+          <span class="label">Streaming Everywhere</span>
+        </div>
+        <div class="body"><p>Original songs written to be felt, streaming across all the major platforms. Rooted in faith and empowerment, the music carries the same heartbeat as everything else under this roof — encouragement you can press play on, right when you need to remember who you are.</p></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="num">III</div>
+        <div>
+          <h3>Custom Jingles</h3>
+          <span class="label">Brands &amp; Personal</span>
+        </div>
+        <div class="body"><p>Custom-written sound for the moments that matter. For brands and businesses, that’s a catchy, professional jingle that makes you unforgettable. For everyday people, it’s a personal song crafted for birthdays, weddings, anniversaries, and every milestone worth singing about — your story, set to music.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="vision">
+    <div class="wrap">
+      <span class="kicker">One Vision</span>
+      <p>Built by a woman, led by faith, and made to help her <em>heal, evolve,</em> and walk boldly in who she’s called to be.</p>
+      <p class="support">Nik Co Holdings exists to give one woman’s God-given vision a home. Every brand under this roof is built on the same belief — that growth is holy work, that purpose is worth pursuing out loud, and that every woman deserves the tools to rise into who she was created to be. This isn’t just business. It’s purpose with a plan: built by a woman who knows what it means to heal, rebuild, and walk boldly anyway — so the next woman doesn’t have to do it alone.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap reveal">
+      <span class="kicker">Let’s Connect</span>
+      <h2>Have something in mind?</h2>
+      <p>A course, a song, or a jingle for your next moment — let’s create something that resonates.</p>
+      <a href="mailto:hello@nikcoholdings.com" class="btn">Get in touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a href="#" class="mono">N&nbsp;C&nbsp;H</a>
+      <div class="fmute">God-led · Woman-built · Made to elevate</div>
+      <div class="fmute">© <span id="yr"></span> Nik Co Holdings · nikcoholdings.com</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
